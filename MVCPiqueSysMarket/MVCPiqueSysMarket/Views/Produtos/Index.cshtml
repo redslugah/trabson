@@ -1,0 +1,41 @@
+﻿@model  List<MVCPiqueSysMarket.Models.Produtos>
+@{
+    ViewBag.Title = "PiqueSysMarket";
+}
+
+
+<h2>Produtos</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+            <th></th>
+        </tr>
+
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Preco</td>
+                <td>@produto.Descricao</td>
+                <td>@produto.Categoria</td>
+
+                <td>@Html.ActionLink("Editar", "Edit", new { id = produto.Id }, new { @class = "btn btn-success" })</td>
+                <td>@Html.ActionLink("Detalhes", "Detalhes", new { id = produto.Id }, new { @class = "btn btn-success" })</td>
+                <td>@Html.ActionLink("Deletar", "Delete", new { id = produto.Id }, new { @class = "btn btn-danger" })</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<hr />
+<a href="@Url.Action("Create", "Produtos")" class="btn btn-success">
+    Novo produto
+    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+</a>
+<hr />
