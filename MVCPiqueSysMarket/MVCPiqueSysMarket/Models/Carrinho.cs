@@ -10,6 +10,5 @@ namespace MVCPiqueSysMarket.Models
         private decimal  valor { get; set; }
         public int cliente { get; set; }
         public List<Produtos> listaCarrinho { get; set; }
-        public int MyProperty { get; set; }
     }
 }
