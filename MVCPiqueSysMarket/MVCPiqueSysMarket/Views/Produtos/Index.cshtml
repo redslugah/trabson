@@ -1,11 +1,10 @@
-﻿@model  List<MVCPiqueSysMarket.Models.Produtos>
+﻿@model List<MVCPiqueSysMarket.Models.Produtos>
+
 @{
-    ViewBag.Title = "PiqueSysMarket-Master";
+    ViewBag.Title = "PiqueSysMarket";
 }
 
-
 <h2>Produtos</h2>
-
 <div class="table-responsive">
     <table class="table table-striped">
         <tr>
@@ -24,19 +23,9 @@
                 <td>@produto.Preco</td>
                 <td>@produto.Descricao</td>
                 <td>@produto.Categoria</td>
-
-                <td>@Html.ActionLink("Editar", "Edit", new { id = produto.Id }, new { @class = "btn btn-success" })</td>
                 <td>@Html.ActionLink("Detalhes", "Detalhes", new { id = produto.Id }, new { @class = "btn btn-success" })</td>
-                <td>@Html.ActionLink("Deletar", "Delete", new { id = produto.Id }, new { @class = "btn btn-danger" })</td>
             </tr>
         }
     </table>
+    <a href="~/Views/Usuarios/Login.cshtml">Login</a>
 </div>
-
-<hr />
-<a href="@Url.Action("Create", "Produtos")" class="btn btn-success">
-    Novo produto
-    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-</a>
-<a href="~/Views/Produtos/Index_U.cshtml">teste</a>
-<hr />

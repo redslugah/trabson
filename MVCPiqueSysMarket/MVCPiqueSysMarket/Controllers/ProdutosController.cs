@@ -20,6 +20,10 @@ namespace MVCPiqueSysMarket.Controllers
         {
             return View(listaDeProdutos);
         }
+        public ActionResult index_()
+        {
+            return View(listaDeProdutos);
+        }
         // GET: Produtos/Details/5
         public ActionResult Detalhes(int? id)
         {
