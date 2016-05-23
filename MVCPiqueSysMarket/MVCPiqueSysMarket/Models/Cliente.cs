@@ -13,14 +13,38 @@ namespace MVCPiqueSysMarket.Models
         public string Email { get; set; }
         public string Senha { get; set; }
 
-        public Cliente(int codigo, string nome, string email, string senha = null)
+        public bool SetCodigo(int codigo)
         {
-            Codigo = codigo;
-            Nome = nome;
-            SetEmail(email);
-            Senha = senha;
-        }
+            if (codigo < 0)
+            {
+                throw new Exception("Descrição inválida! Por favor insira uma descrição.");
+            }
 
+            Codigo = codigo;
+
+            return true;
+        }
+        
+        public bool SetNome(string nome)
+        {
+            if (nome.Equals(""))
+            {
+                throw new Exception("Valor Inválido! Por favor insira um valor positivo.");
+            }
+
+            Nome = nome;
+
+            return true;
+        }
+        public bool SetSenha(string pass)
+        {
+            if (pass.Equals(""))
+            {
+                throw new Exception("Valor Inválido! Por favor insira um valor positivo.");
+            }
+            Senha = pass;
+            return true;
+        }
         private bool SetEmail(string email)
         {
             if (!emailvalido(email))

@@ -20,7 +20,7 @@ namespace MVCPiqueSysMarket.Controllers
         {
             return View(listaDeProdutos);
         }
-        public ActionResult index_()
+        public ActionResult index_Master()
         {
             return View(listaDeProdutos);
         }

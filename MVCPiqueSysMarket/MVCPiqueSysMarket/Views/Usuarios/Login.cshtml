@@ -1,8 +1,14 @@
-﻿@model MVCPiqueSysMarket.Models.Cliente
+﻿@model List<MVCPiqueSysMarket.Models.Cliente>
 
 @{
     ViewBag.Title = "Login";
 }
 
 <h2>Login</h2>
-<a href="~/Views/Usuarios/Cadastro.cshtml">Novo por aqui ? Clique aqui e cadstre-se !</a>
+<div>
+    
+    <a href="/Usuario/Cadastro" title="Cancelar" class="btn btn-info">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+        Cadastrar
+    </a>
+</div>

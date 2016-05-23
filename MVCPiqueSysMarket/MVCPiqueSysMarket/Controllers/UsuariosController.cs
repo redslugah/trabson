@@ -11,20 +11,29 @@ namespace MVCPiqueSysMarket.Controllers
     public class UsuariosController : Controller
     {
 
-        static List<Cliente> listaDeClientes = new List<Cliente>
+        public static List<Cliente> listaDeClientes = new List<Cliente>
         {
-
+            new Cliente { Codigo = 1, Nome = "José", Email = "jose@josemail.com", Senha = "pirulito123"}
         };
-        // GET: Usuarios
-        public ActionResult Index()
-        {
-            return View();
-        }
         //get login
         public ActionResult Login()
         {
             return View(listaDeClientes);
         }
+        /*post login
+        public ActionResult Login(int? cod, string pass)
+        {
+            Cliente clientes = listaDeClientes.Find(x => x.Codigo == cod);//instancia um cliente do tipo cliente e procura o codigo na lista
+            if (clientes == null)//se o cliente for nulo retorna pagina que não existe
+            {
+                return HttpNotFound();
+            }
+            return View(clientes);
+        }
+        */
+        
+
+        // WYD > MU
 
         // GET: Usuarios/Details/5
         public ActionResult Details(int? id)
