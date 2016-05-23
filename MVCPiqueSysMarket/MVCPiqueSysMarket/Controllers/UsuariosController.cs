@@ -48,10 +48,10 @@ namespace MVCPiqueSysMarket.Controllers
         {
             try
             {
-                listaDeClientes.Add(clientes);//add um produto na lista
-                return RedirectToAction("Index");// redireciona para a index
+                listaDeClientes.Add(clientes);//add um cliente na lista
+                return RedirectToAction("Index_U");// redireciona para a index
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index_U");
             }
             catch
             {

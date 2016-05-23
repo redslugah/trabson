@@ -11,7 +11,7 @@ namespace MVCPiqueSysMarket.Controllers
     public class ProdutosController : Controller
     {
 
-        static List<Produtos> listaDeProdutos = new List<Produtos>
+        public static List<Produtos> listaDeProdutos = new List<Produtos>
         {
             new Produtos {Id = 1, Nome = "Banana", Preco = 3, Descricao = "Bananas", Categoria = "Fruta"  }
         };
@@ -20,7 +20,6 @@ namespace MVCPiqueSysMarket.Controllers
         {
             return View(listaDeProdutos);
         }
-
         // GET: Produtos/Details/5
         public ActionResult Detalhes(int? id)
         {
