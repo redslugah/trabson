@@ -13,7 +13,8 @@ namespace MVCPiqueSysMarket.Controllers
 
         public static List<Cliente> listaDeClientes = new List<Cliente>
         {
-            new Cliente { Codigo = 1, Nome = "José", Email = "jose@josemail.com", Senha = "pirulito123"}
+            new Cliente { Codigo = 1, Nome = "José", Email = "jose@josemail.com", Senha = "pirulito123"},
+            new Cliente { Codigo = 2, Nome = "Joao", Email = "joao@joaomail.com", Senha = "pirulito123"}
         };
         //get login
         public ActionResult Login()
@@ -31,6 +32,15 @@ namespace MVCPiqueSysMarket.Controllers
             return View(clientes);
         }
         */
+        public ActionResult loginA(int? cod)
+        {
+            Cliente clientes = listaDeClientes.Find(x => x.Codigo == cod);//instancia um cliente do tipo cliente e procura o codigo na lista
+            if (clientes == null)//se o cliente for nulo retorna pagina que não existe
+            {
+                return HttpNotFound();
+            }
+            return View(clientes);
+        }
         
 
         // WYD > MU
