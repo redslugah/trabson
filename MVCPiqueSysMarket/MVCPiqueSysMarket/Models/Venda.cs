@@ -5,11 +5,10 @@ using System.Web;
 
 namespace MVCPiqueSysMarket.Models
 {
-    public class Carrinho
+    public class Venda
     {
         private decimal  valor { get; set; }
         public int cliente { get; set; }
-        public List<Produtos> listaCarrinho { get; set; }
-        public int MyPropertyDeixaEuCuza1 { get; set; }
+        public List<Produtos> listaVenda { get; set; }
     }
 }

@@ -147,8 +147,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Carrinho.cs" />
+    <Compile Include="Models\Venda.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ItemVenda.cs" />
     <Compile Include="Models\Produtos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,6 +170,7 @@
     <Content Include="Views\Usuarios\Login.cshtml" />
     <Content Include="Views\Usuarios\Cadastro.cshtml" />
     <Content Include="Views\Produtos\Index.cshtml" />
+    <Content Include="Views\Produtos\IndexUser.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
