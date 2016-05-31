@@ -19,8 +19,9 @@ namespace MVCPiqueSysMarket.Controllers
         //get login
         public ActionResult Login()
         {
-            return View(listaDeClientes);
+            return View();
         }
+
         /*post login
         public ActionResult Login(int? cod, string pass)
         {
@@ -32,6 +33,11 @@ namespace MVCPiqueSysMarket.Controllers
             return View(clientes);
         }
         */
+        //GET CADASTRO
+        public ActionResult Cadastro()
+        {
+            return View();
+        }
         public ActionResult loginA(int? cod)
         {
             Cliente clientes = listaDeClientes.Find(x => x.Codigo == cod);//instancia um cliente do tipo cliente e procura o codigo na lista

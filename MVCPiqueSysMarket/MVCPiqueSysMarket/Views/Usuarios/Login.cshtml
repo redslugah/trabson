@@ -1,4 +1,4 @@
-﻿@model List<MVCPiqueSysMarket.Models.Cliente>
+﻿@model MVCPiqueSysMarket.Models.Cliente
 
 @{
     ViewBag.Title = "Login";
@@ -9,32 +9,32 @@
 @using (Html.BeginForm())
 {
     <div class="form-horizontal">
-        <h4>Produtos</h4>
+        <h4>Login</h4>
         <hr>
 
         <div class="form-group">
-            @Html.LabelFor(cliente => cliente.Email, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(cliente =>cliente.Email)
+                @Html.EditorFor(model =>model.Email)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Senha, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Nome)
+                @Html.PasswordFor(model => model.Senha)
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" name="Salvar" value="Salvar" class="btn btn-info" />
+                <input type="submit" name="Salvar" value="LINK START!" class="btn btn-info" />
             </div>
         </div>
     </div>
 }
     Não é cadastrado ainda? Cadastre-se!
     <br />
-    <a href="/Usuario/Cadastro" title="Cancelar" class="btn btn-info">
+    <a href="Cadastro" title="Cadastro" class="btn btn-info">
         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
         Cadastrar
     </a>
