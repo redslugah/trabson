@@ -8,34 +8,40 @@
 <div>
 @using (Html.BeginForm())
 {
-    <div class="form-horizontal">
-        <h4>Login</h4>
-        <hr>
+    <div class="col-md-6" name ="Sidebar">
+        <di class="form-horizontal ">    
+            <h4>Login</h4>
+            <hr>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model =>model.Email)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                     @Html.EditorFor(model =>model.Email)
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Senha, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.PasswordFor(model => model.Senha)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Senha, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(model => model.Senha)
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" name="Salvar" value="LINK START!" class="btn btn-info" />
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <input type="submit" name="Salvar" value="Entrar" class="btn btn-info" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" name="Salvar" value="Esqueceu a Senha?" class="btn btn-info" />
+                    </div>
+                </div>:
             </div>
-        </div>
-    </div>
+            <div class="col-md-12">
+                Não é cadastrado ainda?
+                <a href = "Cadastro" title = "Cadastro">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Cadastre - se
+                </a>
+            </div>
+   </div>
 }
-    Não é cadastrado ainda? Cadastre-se!
-    <br />
-    <a href="Cadastro" title="Cadastro" class="btn btn-info">
-        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-        Cadastrar
-    </a>
 </div>
