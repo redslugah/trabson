@@ -8,7 +8,7 @@ namespace MVCPiqueSysMarket.Models
     public class ItemVenda
     {
 
-        //testebaixaaimighuel
+       
 
     }
 }
